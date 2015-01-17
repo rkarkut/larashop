@@ -13,4 +13,9 @@ class Product extends Eloquent {
 	 * @var string
 	 */
 	protected $table = 'products';
+
+	public function categories()
+	{
+		return $this->belongsToMany('Category');
+	}
 }

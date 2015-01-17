@@ -12,7 +12,7 @@ class CreateCategoryProductsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('category_products', function($table)
+		Schema::create('category_product', function($table)
 		{
 			$table->increments('id');
 			$table->integer('category_id')->references('id')->on('categories');

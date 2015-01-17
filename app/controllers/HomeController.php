@@ -25,7 +25,6 @@ class HomeController extends BaseController {
 		$products = Product::orderBy('created_at', 'desc')->take(10)->get();
 
 		$mainProduct = $products[0];
-
 		unset($products[0]);
 
 		return View::make('home.main_page', array(

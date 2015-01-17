@@ -10,10 +10,6 @@
 
     </div>
 
-
-
-
-
     <div class="container">
         <div class="menu row">
 
@@ -56,7 +52,7 @@
                 <div class="productsrow">
                     @forelse($products as $product)
                     <div class="product menu-category">
-                        <div class="menu-category-name list-group-item active">Accessories</div>
+                        <div class="menu-category-name list-group-item active">{{$product->categories{0}->title}}</div>
                         <div class="product-image">
                             <img class="product-image menu-item list-group-item" src="/products/{{$product->id}}/{{$product->image_src}}">
                         </div> <a href="#" class="menu-item list-group-item">{{$product->name}}<span class="badge">£28</span></a>
