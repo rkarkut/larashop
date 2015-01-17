@@ -1,0 +1,12 @@
+.page-content {
+    margin-top: 10px;
+}
+
+.btn-center {
+    margin: 0 auto;
+    display: block;
+}
+
+.navbar-inverse {
+    background-color: #000000;
+}

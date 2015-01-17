@@ -122,7 +122,10 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
-		'Teepluss\Categorize\CategorizeServiceProvider'
+		'Teepluss\Categorize\CategorizeServiceProvider',
+		'Way\Generators\GeneratorsServiceProvider',
+		'Laracasts\Commander\CommanderServiceProvider',
+		'Laracasts\Flash\FlashServiceProvider'
 	),
 
 	/*
@@ -188,7 +191,8 @@ return array(
 		'Str'               => 'Illuminate\Support\Str',
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
-		'View'              => 'Illuminate\Support\Facades\View'
+		'View'              => 'Illuminate\Support\Facades\View',
+		'Flash'				=> 'Laracasts\Flash\Flash'
 	),
 
 );
