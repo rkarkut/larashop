@@ -2,12 +2,9 @@
 
 @section('content')
 
-    <div class="col-md-12">
-        <div class="center-block text-center">
-            <h1>E-Commerce Template</h1>
-            <p class="lead">Get Your Style On</p>
-        </div>
-
+    <div class="center-block text-center">
+        <h1>E-Commerce Template</h1>
+        <p class="lead">Get Your Style On</p>
     </div>
 
     <div class="container">
@@ -19,7 +16,7 @@
                 <h2>{{$mainProduct->name}}</h2>
                 <p>{{nl2br($mainProduct->description)}}</p>
                 <hr>
-                <h2 class="text-right">$39</h2>
+                <h2 class="text-right">{{$mainProduct->price->value}} {{$mainProduct->price->currency}}</h2>
                 <button class="btn btn-primary btn-lg ">Add to Cart</button>
                 <hr>
 
@@ -55,7 +52,7 @@
                         <div class="menu-category-name list-group-item active">{{$product->categories{0}->title}}</div>
                         <div class="product-image">
                             <img class="product-image menu-item list-group-item" src="/products/{{$product->id}}/{{$product->image_src}}">
-                        </div> <a href="#" class="menu-item list-group-item">{{$product->name}}<span class="badge">£28</span></a>
+                        </div> <a href="#" class="menu-item list-group-item">{{$product->name}}<span class="badge">{{$product->price->value}}&nbsp;{{$product->price->currency}}</span></a>
 
                     </div>
                     @endforeach
@@ -64,57 +61,4 @@
         </div>
         <!--/row-->
     </div>
-
-
-
-    {{--<div class="row">--}}
-        {{--<div class="col-md-3">--}}
-
-            {{--<div class="panel panel-default">--}}
-                {{--<!-- Default panel contents -->--}}
-                {{--<div class="panel-heading">Categories</div>--}}
-                {{--<!-- List group -->--}}
-                {{--<ul class="list-group">--}}
-                {{--@foreach($categories as $shop)--}}
-                        {{--@foreach($shop['children'] as $category)--}}
-
-                            {{--<li class="list-group-item">{{$category['title']}}</li>--}}
-
-                            {{--@if ($category['children'])--}}
-
-                                {{--@foreach($category['children'] as $subcategory)--}}
-                                    {{--<li class="list-group-item">{{$subcategory['title']}}</li>--}}
-                                {{--@endforeach--}}
-
-                            {{--@endif--}}
-
-                        {{--@endforeach--}}
-                {{--@endforeach--}}
-                {{--</ul>--}}
-            {{--</div>--}}
-
-        {{--</div>--}}
-        {{--<div class="col-md-9">--}}
-
-            {{--<div class="panel panel-default">--}}
-                {{--<!-- Default panel contents -->--}}
-                {{--<div class="panel-heading">Products</div>--}}
-                {{--<!-- List group -->--}}
-                {{--<ul class="list-group">--}}
-                {{--@forelse($products as $product)--}}
-                    {{--<li class="list-group-item">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-md-10">{{ $product->name }}</div>--}}
-                            {{--<div class="col-md-2">12.99</div>--}}
-                        {{--</div>--}}
-                    {{--</li>--}}
-                {{--@empty--}}
-                    {{--<div class="alert alert-danger">Products not found!</div>--}}
-                {{--@endforelse--}}
-                {{--</ul>--}}
-            {{--</div>--}}
-
-
-        {{--</div>--}}
-    {{--</div>--}}
 @stop

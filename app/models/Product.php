@@ -1,10 +1,5 @@
 <?php
 
-use Illuminate\Auth\UserTrait;
-use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableTrait;
-use Illuminate\Auth\Reminders\RemindableInterface;
-
 class Product extends Eloquent {
 
 	/**
@@ -17,5 +12,10 @@ class Product extends Eloquent {
 	public function categories()
 	{
 		return $this->belongsToMany('Category');
+	}
+
+	public function price()
+	{
+		return $this->hasOne('Price');
 	}
 }
